@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  contacts-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cloud-contacts-monolith
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      # Persistencia de la base de datos de SQLite
+      - contacts-data:/usr/src/app/src
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+
+volumes:
+  contacts-data:
+    driver: local

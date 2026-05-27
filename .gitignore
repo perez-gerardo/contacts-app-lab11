@@ -1,0 +1,14 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Base de datos local SQLite (se autogenera en AWS)
+src/contacts.db
+
+# Logs y entornos
+.env
+.DS_Store
+.idea/
+.vscode/
