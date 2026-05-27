@@ -41,7 +41,7 @@ function seedData() {
       console.log('Insertando datos semilla de prueba...');
       const stmt = db.prepare('INSERT INTO contacts (name, phone, email, notes) VALUES (?, ?, ?, ?)');
       stmt.run('Jaime Farfán', '987654321', 'jfarfan@tecsup.edu.pe', 'Profesor de Soluciones en la Nube');
-      stmt.run('Agustin Perez', '912345678', 'agustin.perez@tecsup.edu.pe', 'Estudiante de Cloud Solutions');
+      stmt.run('Gerardo Perez', '912345678', 'gerardo.perez@tecsup.edu.pe', 'Estudiante de Cloud Solutions');
       stmt.run('AWS Academy Support', '800-123-456', 'support@awsacademy.com', 'Soporte del entorno virtual de AWS');
       stmt.finalize();
       console.log('Datos semilla insertados con éxito.');
